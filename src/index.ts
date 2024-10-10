@@ -17,7 +17,7 @@ const port = process.env.PORT || 3000;
 //Configuring cors to only be able to use post method to retreive data from the server ensuring better security.
 const corsOptions: CorsOptions = {
   origin:"*",
-  methods:"POST",
+  methods:"GET",
   allowedHeaders:"Origin, X-Requested-With, Content-Type, Accept",
 }
 
