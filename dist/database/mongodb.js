@@ -16,7 +16,7 @@ const mongoose_1 = __importDefault(require("mongoose"));
 //Function to get the mongoDB URI string from environment and then use it to connect to your mongodb instance.
 const connectToDatabase = () => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const URI = process.env.MONGO_URI;
+        const URI = process.env.MONGODB_URI;
         if (URI) {
             yield mongoose_1.default.connect(URI);
             console.log("Connected to database");
