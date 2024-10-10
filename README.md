@@ -2,7 +2,9 @@
 
 This program implements a backend server which does the following tasks:
 
-- Runs a background worker that fetches and stores data for the following 3 cryptocurrencies - Bitcoin , Ethereum , Matic-Network.
+- Runs a background worker every 2 hours using node-cron that fetches and stores data for the following 3 cryptocurrencies using axios and the coingecko api- Bitcoin , Ethereum , Matic-Network.
+
+- Creates a web server using express.
 
 - Exposes a `/ping` endpoint - GET endpoint to check whether the server is alive or not.
 
