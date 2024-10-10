@@ -12,7 +12,7 @@ This program implements a backend server which does the following tasks:
 
 - Exposes a `/deviation` Endpoint - GET endpoint that returns the standard deviation of the price of the requested cryptocurrency for the last 100 records stored by the background service in the database.
 
-## Trying out the APIs
+## Trying out the API
 
 You can try out the apis by opening postman or any other api testing application you want to use. Append the endpoint at the end of the deployment link `https://koinx-eosin.vercel.app/` for example:
 
