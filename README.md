@@ -54,4 +54,3 @@ Now you can start the project with the following command
 npm start
 ```
 
-## Contribution Guidelines
