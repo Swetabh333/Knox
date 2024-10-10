@@ -2,7 +2,7 @@
 
 This program implements a backend server which does the following tasks:
 
-- Run a background worker that fetches and stores data for the following 3 cryptocurrencies - Bitcoin , Ethereum , Matic- Network.
+- Runs a background worker that fetches and stores data for the following 3 cryptocurrencies - Bitcoin , Ethereum , Matic-Network.
 
 - Exposes a `/ping` endpoint - GET endpoint to check whether the server is alive or not.
 
@@ -15,9 +15,18 @@ This program implements a backend server which does the following tasks:
 You can try out the apis by opening postman or any other api testing application you want to use. Append the endpoint at the end of the deployment link `https://koinx-eosin.vercel.app/` for example:
 
 ```
-https://koinx-eosin.vercel.app/stats?coin=matic-network
+https://koinx-eosin.vercel.app/ping
 ```
-will fetch you the stats for bitcoin.
+
+Can be used to check if the server is alive
+
+or
+
+```
+https://koinx-eosin.vercel.app/stats?coin=matic-network
+
+```
+will fetch you the stats for matic-network.
 
 you can replace `/stats` with `/deviation` as well and `matic-network` with `bitcoin` or `ethereum`.
 
@@ -44,3 +53,5 @@ Now you can start the project with the following command
 ```bash
 npm start
 ```
+
+## Contribution Guidelines
