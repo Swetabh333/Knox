@@ -8,7 +8,7 @@ interface apiResponse {
     [key:string]:{
         usd:number;
         usd_market_cap:number;
-        usd_24_change:number;
+        usd_24h_change:number;
     };
 };
 
@@ -35,7 +35,7 @@ const fetchCoinData = async () =>{
                 coinId:coin,
                 price:data.usd,
                 marketCap:data.usd_market_cap,
-                change24h:data.usd_24_change
+                change24h:data.usd_24h_change,
             });
 
         }catch(err){
@@ -49,6 +49,7 @@ const fetchCoinData = async () =>{
 //This function calls the background worker immediately once and then schedules it to run every 2 hours.
 const startCronJob = ()=>{
     fetchCoinData(); // runs the function immediately once
+    console.log("cron job started")
     nc.schedule("0 */2 * * *",fetchCoinData); //schedules it to run every 2 hours.
 }
 

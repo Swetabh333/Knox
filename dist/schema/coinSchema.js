@@ -29,7 +29,7 @@ const coinSchema = new mongoose_1.Schema({
     coinId: {
         type: String,
         required: true,
-        enum: ["bitcoin", "ethereum", "matic-netwoek"]
+        enum: ["bitcoin", "ethereum", "matic-network"]
     },
     price: {
         type: Number,
