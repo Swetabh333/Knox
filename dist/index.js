@@ -17,6 +17,7 @@ const cors_1 = __importDefault(require("cors"));
 const mongodb_1 = __importDefault(require("./database/mongodb"));
 const dotenv_1 = __importDefault(require("dotenv"));
 const fetchdata_1 = __importDefault(require("./job/fetchdata"));
+const endpoints_1 = __importDefault(require("./routes/endpoints"));
 //To be able to load files from environment
 dotenv_1.default.config();
 //Starting an  express application server.
@@ -35,6 +36,7 @@ app.options("*", (0, cors_1.default)(corsOptions)); // This one is for preflight
 app.get("/ping", (req, res) => {
     res.send("pong");
 });
+app.use("/", endpoints_1.default);
 //creating a top level async function to make sure we are connected to database before starting background worker.
 const startServer = () => __awaiter(void 0, void 0, void 0, function* () {
     try {

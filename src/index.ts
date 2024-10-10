@@ -3,7 +3,7 @@ import cors, { CorsOptions } from "cors";
 import connectToDatabase from "./database/mongodb";
 import dotenv from "dotenv"
 import startCronJob from "./job/fetchdata";
-
+import router from "./routes/endpoints";
 
 //To be able to load files from environment
 dotenv.config();
@@ -27,6 +27,7 @@ app.options("*",cors(corsOptions)); // This one is for preflightrequest
 app.get("/ping", (req: Request, res: Response) => {
   res.send("pong");
 });
+app.use("/",router);
 
 //creating a top level async function to make sure we are connected to database before starting background worker.
 const startServer = async () => {
