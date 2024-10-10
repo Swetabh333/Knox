@@ -26,7 +26,6 @@ or
 
 ```
 https://koinx-eosin.vercel.app/stats?coin=matic-network
-
 ```
 will fetch you the stats for matic-network.
 
